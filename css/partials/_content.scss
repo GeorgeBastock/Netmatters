@@ -800,10 +800,10 @@ section {
   }
 
   .bot-nav {
-    width: $marginWidthLarge !important;
+    width: $marginWidthLarge ;
 
     .under-menu .margin {
-      width: $marginWidthLarge !important;
+      width: $marginWidthLarge ;
 
       li {
         font-size: 0.8125rem;
@@ -817,15 +817,15 @@ section {
 
   // Hero image //
   .hero-content {
-    width: $marginWidthLarge !important;
+    width: $marginWidthLarge ;
   }
 
   // Services //
   .services {
-    width: $marginWidthLarge !important;
+    width: $marginWidthLarge ;
 
     .service {
-      width: 49% !important;
+      width: 49% ;
       margin-bottom: 25px;
     }
   }
@@ -833,10 +833,10 @@ section {
   // About //
   .about {
     .about-text {
-      width: $marginWidthLarge !important;
+      width: $marginWidthLarge ;
 
       p {
-        width: 100% !important;
+        width: 100% ;
       }
     }
   }
@@ -844,14 +844,14 @@ section {
   // Latest articles //
   .latest {
     .bar-padding {
-      width: $marginWidthLarge !important;
+      width: $marginWidthLarge ;
     }
 
     .latest-article-list {
-      width: $marginWidthLarge !important;
+      width: $marginWidthLarge ;
 
       .latest-article {
-        width: 48% !important;
+        width: 48% ;
 
         &:last-of-type {
           display: none;
@@ -862,21 +862,21 @@ section {
 
   // Clients //
   .clients {
-    width: $marginWidthLarge !important;
+    width: $marginWidthLarge ;
   }
 
   // Footer //
   .footer-contents {
-    width: $marginWidthLarge !important;
+    width: $marginWidthLarge ;
 
     .section-one, .section-two, .section-three, .section-four {
-      width: 50% !important;
+      width: 50% ;
     }
   }
 
   // Accreditations //
   .accreditations {
-    width: $marginWidthLarge !important;
+    width: $marginWidthLarge ;
   }
 }
 
@@ -884,7 +884,7 @@ section {
 @media only screen and (max-width: 992px) {
   // navbar //
   .top-nav {
-    width: $marginWidthTablet !important;
+    width: $marginWidthTablet ;
 
     .support-button, .contact-button {
       display: none;
@@ -897,11 +897,11 @@ section {
 
   // hero image //
   .hero {
-    height: calc(100vh - 117px) !important;
+    height: calc(100vh - 117px) ;
 
     .hero-image {
       &::before {
-        background: linear-gradient(to left, rgba(0,0,0,0) -20%, rgba(0,0,0,1) 100%) !important;
+        background: linear-gradient(to left, rgba(0,0,0,0) -20%, rgba(0,0,0,1) 100%) ;
       }
 
       .hero-content {
@@ -913,41 +913,41 @@ section {
 
   // Services //
   .services {
-    width: $marginWidthTablet !important;
+    width: $marginWidthTablet ;
 
     .service {
-      width: 48% !important;
+      width: 48% ;
 
       &:nth-of-type(-n+2) {
-        width: 48% !important;
+        width: 48% ;
       }
     }
   }
 
   // About //
   .about {
-    background-image: none !important;
+    background-image: none ;
 
     .about-text {
-      width: $marginWidthTablet !important;
+      width: $marginWidthTablet ;
     }
   }
 
   // Latest articles //
   .latest {
     .bar-padding {
-      width: $marginWidthTablet !important;
+      width: $marginWidthTablet ;
     }
 
     .latest-article-list {
-      width: $marginWidthTablet !important;
+      width: $marginWidthTablet ;
 
       .article-image {
         &:hover {
           img {
-            opacity: 1 !important;
-            transition-property: none !important;
-            transform: none !important;
+            opacity: 1 ;
+            transition-property: none ;
+            transform: none ;
           }
         }
       }
@@ -956,17 +956,17 @@ section {
 
   // Clients //
   .clients {
-    width: $marginWidthTablet !important;
+    width: $marginWidthTablet ;
   }
 
   // Footer //
   .footer-contents {
-    width: $marginWidthTablet !important;
+    width: $marginWidthTablet ;
   }
 
   // Accreditations //
   .accreditations {
-    width: $marginWidthTablet !important;
+    width: $marginWidthTablet ;
   }
 }
 
@@ -974,13 +974,13 @@ section {
 @media only screen and (max-width: 768px) {
   // Navbar //
   .top-nav {
-    width: $marginWidthMobile !important;
+    width: $marginWidthMobile ;
 
     .border {
-      display: block !important;
+      display: block ;
 
       .phone {
-        display: block !important;
+        display: block ;
       }
     }
 
@@ -991,18 +991,18 @@ section {
 
   // Hero image //
   .hero {
-    height: 90vh !important;
+    height: 90vh ;
   }
 
   // Services //
   .services {
-    width: $marginWidthMobile !important;
+    width: $marginWidthMobile ;
 
     .service {
-      width: $marginWidthMobile !important;
+      width: $marginWidthMobile ;
 
       &:nth-of-type(-n+2) {
-        width: $marginWidthMobile !important;
+        width: $marginWidthMobile ;
       }
     }
   }
@@ -1010,25 +1010,25 @@ section {
   // About //
   .about {
     .about-text {
-      width: $marginWidthMobile !important;
+      width: $marginWidthMobile ;
     }
   }
 
   // Latest articles //
   .latest {
     .bar-padding {
-      width: $marginWidthMobile !important;
+      width: $marginWidthMobile ;
     }
 
     .latest-article-list {
-      width: $marginWidthMobile !important;
+      width: $marginWidthMobile ;
 
       .latest-article {
-        width: $marginWidthMobile !important;
+        width: $marginWidthMobile ;
         margin-top: 30px;
 
         &:first-of-type {
-          margin-top: 0 !important;
+          margin-top: 0 ;
         }
 
         &:last-of-type {
@@ -1045,17 +1045,17 @@ section {
 
   // Footer //
   .footer-contents {
-    padding: 40px 0px !important;
-    width: $marginWidthMobile !important;
+    padding: 40px 0px ;
+    width: $marginWidthMobile ;
 
     .section-one, .section-two, .section-three, .section-four {
-      width: $marginWidthMobile !important;
+      width: $marginWidthMobile ;
 
       a {
-        width: 46% !important;
+        width: 46% ;
 
         &:nth-of-type(2) {
-          margin: 0 !important;
+          margin: 0 ;
         }
       }
     }
