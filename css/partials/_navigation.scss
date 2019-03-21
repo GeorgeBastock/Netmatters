@@ -1,0 +1,376 @@
+// main: ../main.scss
+// -------------------------------------------------
+// Description:   This file contains everything to do with all menus.
+// -------------------------------------------------
+@import 'Variables';
+@import 'mixins';
+
+// -- Header -- //
+.top-nav {
+  grid-area: topnav;
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px 15px;
+
+  // Company logo //
+  .brand {
+    order: -1;
+    margin-right: auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // Phone button //
+  .border {
+    position: relative;
+    min-width: 28px;
+    height: 46px;
+    margin-left: 15px;
+    display: none;
+
+    .phone {
+      display: none;
+      color: $colorNavy;
+      font-size: 2rem;
+      transform: rotate(-45deg);
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+
+    &:hover {
+      border-bottom: 3px solid $colorNavy;
+
+      .phone {
+        color: darken($colorNavy, 10%);
+      }
+    }
+  }
+
+  // Header buttons //
+  .contact-button,
+  .support-button {
+    transition: background-color 0.5s;
+    text-transform: uppercase;
+    padding: 14px;
+    font-size: 1.125rem;
+    margin-right: 14px;
+    color: $colorWhite;
+    border-radius: 4px;
+    cursor: pointer;
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  .support-button {
+    background-color: $colorBlue;
+
+    &:hover {
+      background-color: darken($colorBlue, 10%);
+    }
+  }
+
+  .contact-button {
+    background-color: #999aa2;
+
+    &:hover {
+      background-color: darken(#999aa2, 10%);
+    }
+  }
+
+  //  Side menu button //
+  .hamburger {
+    order: 2;
+    background-color: $colorNavy;
+    color: $colorWhite;
+    width: 63px;
+    height: 55px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: background-color 0.5s;
+
+    &:hover {
+      background-color: darken($colorNavy, 10%);
+    }
+
+    div {
+      width: 33px;
+      height: 3px;
+      background-color: $colorWhite;
+      margin: 5px auto;
+
+      &:nth-of-type(1) {
+        margin-top: 10px;
+      }
+
+      &:nth-of-type(3) {
+        margin-bottom: 2px;
+      }
+    }
+
+    .title {
+      display: block;
+      font-size: 0.75rem;
+      line-height: 1;
+      position: relative;
+      top: 3px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+}
+
+// -- Main navigation -- //
+.bot-nav {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  // Main navbar section //
+  > ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid rgba(255,255,255,0.1);
+    border-right: 1px solid rgba(0,0,0,0.25);
+
+    // Blocks of main section //
+    > li {
+      text-align: center;
+      width: 100%;
+      border-right: 1px solid rgba(255,255,255,0.1);
+      border-left: 1px solid rgba(0,0,0,0.25);
+      justify-content: center;
+      cursor: pointer;
+      padding: 18px 0;
+      transition: background-color 0.5s;
+
+      a {
+        color: $colorWhite;
+        text-transform: uppercase;
+
+        .first-word {
+          font-size: 0.625rem;
+          display: block;
+          margin: 2px 0 -5px 0;
+        }
+
+        i {
+          font-size: 1.375rem;
+          transition: color 0.5s;
+
+          // Menu icon colors //
+          &.fa-code {
+            color: $colorPurple;
+          }
+
+          &.fa-desktop {
+            color: $colorBlue;
+          }
+
+          &.fa-phone-volume {
+            color: $colorRed;
+          }
+
+          &.fa-th {
+            color: $colorSlate;
+          }
+
+          &.fa-chart-bar {
+            color: $colorGreen;
+          }
+
+          &.fa-shield-alt {
+            color: $colorPink;
+          }
+        }
+      }
+
+      // Block hovers //
+      &:hover {
+        ul.under-menu {
+          visibility: visible;
+          opacity: 1;
+        }
+
+        &:nth-of-type(1) {
+          background-color: $colorPurple;
+        }
+
+        &:nth-of-type(2) {
+          background-color: $colorBlue;
+        }
+
+        &:nth-of-type(3) {
+          background-color: $colorRed;
+        }
+
+        &:nth-of-type(4) {
+          background-color: $colorSlate;
+        }
+
+        &:nth-of-type(5) {
+          background-color: $colorGreen;
+        }
+
+        &:nth-of-type(6) {
+          background-color: $colorPink;
+        }
+
+        i {
+          color: $colorWhite !important;
+        }
+      }
+
+      // -- Sub menu -- //
+      ul.under-menu {
+        z-index: 1;
+        display: flex;
+        padding: 0;
+        @include absolute(217px, auto, auto, 0);
+        width: 100%;
+        height: 50px;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.3s linear,opacity 0.3s linear;
+
+        .margin {
+          display: flex;
+          margin: 0 auto;
+          padding: 0 15px;
+          width: 1200px;
+        }
+
+        // Under menu bg color  //
+        &.web-design {
+          background-color: $colorPurple;
+        }
+
+        &.it-support {
+          background-color: $colorBlue;
+        }
+
+        &.telecoms-services {
+          background-color: $colorRed;
+        }
+
+        &.bespoke-software {
+          background-color: $colorSlate;
+        }
+
+        &.digital-marketing {
+          background-color: $colorGreen;
+        }
+
+        &.cyber-security {
+          background-color: $colorPink;
+        }
+
+        // Blocks of sub menu //
+        li {
+          display: flex;
+          color: $colorWhite;
+          list-style-type: none;
+          display: flex;
+          text-transform: uppercase;
+          align-items: center;
+          justify-content: center;
+
+          &::after {
+            content: "-";
+            padding: 0 20px;
+          }
+
+          &:last-child::after {
+            content: "";
+            padding: 0;
+          }
+        }
+      }
+
+      // Detects edge and styles for browser (Glitch) //
+      _:-ms-lang(x), _:-webkit-full-screen, .under-menu {
+        top: 215px !important;
+      }
+    }
+  }
+}
+
+// -- Footer -- //
+footer {
+  .footer-contents {
+    padding: 40px 15px;
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    // Sections //
+    .section-one, .section-two, .section-three, .section-four {
+      width: 25%;
+      padding: 0 15px;
+    }
+
+    // Social media //
+    .section-four {
+      .social-media {
+        a {
+          display: inline-block;
+          background-color: rgba(0,0,0,0.25);
+          color: #fff;
+          text-align: center;
+          text-decoration: none;
+          margin: 0 15px 0 0;
+          width: 43%;
+          padding: 15px;
+          transition: background-color .5s;
+
+          &:hover {
+            &.facebook {
+              background-color: $colorSocialFacebook;
+            }
+            &.twitter {
+              background-color: $colorSocialTwitter;
+            }
+            &.linkedin {
+              background-color: $colorSocialLinkedIn;
+            }
+          }
+
+          &:last-of-type {
+            margin-top: 18px !important;
+          }
+
+          i {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    ul {
+      padding: 0;
+      list-style-type: none;
+      font-size: 0.875rem;
+      color: white;
+      line-height: 22px;
+
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

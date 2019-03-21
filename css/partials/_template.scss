@@ -1,0 +1,58 @@
+// main: ../main.scss
+// -------------------------------------------------
+//   Description:   This file contains everything to
+//                  do with the template.
+// -------------------------------------------------
+@import 'Variables';
+@import 'mixins';
+
+// -- Overall site styles -- //
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: $defaultFontSize;
+	font-family: 'Poppins', sans-serif;
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+// -- Site Layout -- //
+html {
+	body {
+		display: grid;
+		margin: unset;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto auto auto auto;
+		grid-template-areas: "header" "navbar" "main" "footer" "accreditations";
+
+		// CSS grid layout //
+		header {
+			background-color: $colorWhite;
+			grid-area: header;
+		}
+
+		nav {
+			background-color: $colorNavy;
+			grid-area: navbar;
+		}
+
+		main {
+			background-color: $colorWhite;
+			grid-area: main;
+			display: grid;
+			grid-template-columns: 100%;
+			grid-template-rows: auto auto auto auto auto;
+			grid-template-areas: "hero" "services" "about" "latest" "clients";
+		}
+
+		footer {
+			background-color: $colorNavy;
+			grid-area: footer;
+		}
+	}
+}
