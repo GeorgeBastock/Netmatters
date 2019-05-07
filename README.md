@@ -1,2 +1,2 @@
-# html-css-reflection
+# Netmatters-clone
 A static html and css rebuild of netmatters homepage using flexbox, scss and css grids. Both responsive and interactive.
