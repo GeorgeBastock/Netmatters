@@ -796,20 +796,20 @@ section {
 @media only screen and (max-width: 1260px) {
   // Navbar //
   .top-nav {
-    width: $marginWidthLarge;
+    width: $marginWidthLarge !important;
   }
 
   .bot-nav {
-    width: $marginWidthLarge ;
+    width: $marginWidthLarge !important;
 
     .under-menu .margin {
-      width: $marginWidthLarge ;
+      width: $marginWidthLarge !important;
 
       li {
-        font-size: 0.8125rem;
+        font-size: 0.8125rem !important;
 
         &::after {
-          padding: 0 15px;
+          padding: 0 15px !important;
         }
       }
     }
@@ -817,26 +817,26 @@ section {
 
   // Hero image //
   .hero-content {
-    width: $marginWidthLarge ;
+    width: $marginWidthLarge !important;
   }
 
   // Services //
   .services {
-    width: $marginWidthLarge ;
+    width: $marginWidthLarge !important;
 
     .service {
-      width: 49% ;
-      margin-bottom: 25px;
+      width: 49% !important;
+      margin-bottom: 25px !important;
     }
   }
 
   // About //
   .about {
     .about-text {
-      width: $marginWidthLarge ;
+      width: $marginWidthLarge !important;
 
       p {
-        width: 100% ;
+        width: 100% !important;
       }
     }
   }
@@ -844,17 +844,17 @@ section {
   // Latest articles //
   .latest {
     .bar-padding {
-      width: $marginWidthLarge ;
+      width: $marginWidthLarge !important;
     }
 
     .latest-article-list {
-      width: $marginWidthLarge ;
+      width: $marginWidthLarge !important;
 
       .latest-article {
-        width: 48% ;
+        width: 48% !important;
 
         &:last-of-type {
-          display: none;
+          display: none !important;
         }
       }
     }
@@ -862,21 +862,21 @@ section {
 
   // Clients //
   .clients {
-    width: $marginWidthLarge ;
+    width: $marginWidthLarge !important;
   }
 
   // Footer //
   .footer-contents {
-    width: $marginWidthLarge ;
+    width: $marginWidthLarge !important;
 
     .section-one, .section-two, .section-three, .section-four {
-      width: 50% ;
+      width: 50% !important;
     }
   }
 
   // Accreditations //
   .accreditations {
-    width: $marginWidthLarge ;
+    width: $marginWidthLarge !important;
   }
 }
 
@@ -884,70 +884,70 @@ section {
 @media only screen and (max-width: 992px) {
   // navbar //
   .top-nav {
-    width: $marginWidthTablet ;
+    width: $marginWidthTablet !important;
 
     .support-button, .contact-button {
-      display: none;
+      display: none !important;
     }
   }
 
   .bot-nav {
-    display: none;
+    display: none !important;
   }
 
   // hero image //
   .hero {
-    height: calc(100vh - 117px) ;
+    height: calc(100vh - 117px) !important;
 
     .hero-image {
       &::before {
-        background: linear-gradient(to left, rgba(0,0,0,0) -20%, rgba(0,0,0,1) 100%) ;
+        background: linear-gradient(to left, rgba(0,0,0,0) -20%, rgba(0,0,0,1) 100%) !important;
       }
 
       .hero-content {
-        align-items: center;
-        text-align: center;
+        align-items: center !important;
+        text-align: center !important;
       }
     }
   }
 
   // Services //
   .services {
-    width: $marginWidthTablet ;
+    width: $marginWidthTablet !important;
 
     .service {
-      width: 48% ;
+      width: 48% !important;
 
       &:nth-of-type(-n+2) {
-        width: 48% ;
+        width: 48% !important;
       }
     }
   }
 
   // About //
   .about {
-    background-image: none ;
+    background-image: none !important;
 
     .about-text {
-      width: $marginWidthTablet ;
+      width: $marginWidthTablet !important;
     }
   }
 
   // Latest articles //
   .latest {
     .bar-padding {
-      width: $marginWidthTablet ;
+      width: $marginWidthTablet !important;
     }
 
     .latest-article-list {
-      width: $marginWidthTablet ;
+      width: $marginWidthTablet !important;
 
       .article-image {
         &:hover {
           img {
-            opacity: 1 ;
-            transition-property: none ;
-            transform: none ;
+            opacity: 1 !important;
+            transition-property: none !important;
+            transform: none !important;
           }
         }
       }
@@ -956,17 +956,17 @@ section {
 
   // Clients //
   .clients {
-    width: $marginWidthTablet ;
+    width: $marginWidthTablet !important;
   }
 
   // Footer //
   .footer-contents {
-    width: $marginWidthTablet ;
+    width: $marginWidthTablet !important;
   }
 
   // Accreditations //
   .accreditations {
-    width: $marginWidthTablet ;
+    width: $marginWidthTablet !important;
   }
 }
 
@@ -974,35 +974,35 @@ section {
 @media only screen and (max-width: 768px) {
   // Navbar //
   .top-nav {
-    width: $marginWidthMobile ;
+    width: $marginWidthMobile !important;
 
     .border {
-      display: block ;
+      display: block !important;
 
       .phone {
-        display: block ;
+        display: block !important;
       }
     }
 
     .hamburger {
-      margin-left: 35px;
+      margin-left: 35px !important;
     }
   }
 
   // Hero image //
   .hero {
-    height: 90vh ;
+    height: 90vh !important;
   }
 
   // Services //
   .services {
-    width: $marginWidthMobile ;
+    width: $marginWidthMobile !important;
 
     .service {
-      width: $marginWidthMobile ;
+      width: $marginWidthMobile !important;
 
       &:nth-of-type(-n+2) {
-        width: $marginWidthMobile ;
+        width: $marginWidthMobile !important;
       }
     }
   }
@@ -1010,29 +1010,29 @@ section {
   // About //
   .about {
     .about-text {
-      width: $marginWidthMobile ;
+      width: $marginWidthMobile !important;
     }
   }
 
   // Latest articles //
   .latest {
     .bar-padding {
-      width: $marginWidthMobile ;
+      width: $marginWidthMobile !important;
     }
 
     .latest-article-list {
-      width: $marginWidthMobile ;
+      width: $marginWidthMobile !important;
 
       .latest-article {
-        width: $marginWidthMobile ;
-        margin-top: 30px;
+        width: $marginWidthMobile !important;
+        margin-top: 30px !important;
 
         &:first-of-type {
-          margin-top: 0 ;
+          margin-top: 0 !important;
         }
 
         &:last-of-type {
-          display: block;
+          display: block !important;
         }
       }
     }
@@ -1040,22 +1040,22 @@ section {
 
   // Clients //
   .clients {
-    display: none;
+    display: none !important;
   }
 
   // Footer //
   .footer-contents {
-    padding: 40px 0px ;
-    width: $marginWidthMobile ;
+    padding: 40px 0px !important;
+    width: $marginWidthMobile !important;
 
     .section-one, .section-two, .section-three, .section-four {
-      width: $marginWidthMobile ;
+      width: $marginWidthMobile !important;
 
       a {
-        width: 46% ;
+        width: 46% !important;
 
         &:nth-of-type(2) {
-          margin: 0 ;
+          margin: 0 !important;
         }
       }
     }
@@ -1063,6 +1063,6 @@ section {
 
   // Accreditations //
   .accreditations {
-    display: none;
+    display: none !important;
   }
 }
