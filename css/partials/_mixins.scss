@@ -13,9 +13,9 @@
 
 // Basic 45 values used for absolute positioning. //
 @mixin absolute ($top, $right, $bottom, $left) {
-   position: absolute;
-   top: $top;
-   right: $right;
-   bottom: $bottom;
-   left: $left;
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
 }
