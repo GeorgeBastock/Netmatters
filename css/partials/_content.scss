@@ -37,6 +37,110 @@ h4 {
     font-size: 1rem;
 }
 
+// -- Side Nav -- //
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    transition: width 0.5s;
+    background-color: $colorNavy;
+
+    &.side-menu-push {
+        width: 350px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .outer-ul {
+        border-top: 1px solid rgba(0,0,0,0.25);
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        width: 350px;
+        cursor: pointer;
+
+        .outer-li {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(0,0,0,0.25);
+
+            &:hover {
+                a {
+                    background-color: rgba(255,255,255,0.05);
+                }
+            }
+            
+            a {
+                display: block;
+                color: #fff;
+                padding: 20px;
+                text-transform: uppercase;
+                font-size: 16px;
+                text-decoration: none;
+                line-height: 1;
+                position: relative;
+            }
+
+            .inner-ul {
+                .inner-li {
+                    border-top: 1px solid rgba(0,0,0,0.45);
+
+                    a {
+                        border-top: 1px solid rgba(255,255,255,0.05);
+                        display: block;
+                        color: #fff;
+                        background-color: rgba(0,0,0,0.25);
+                        padding: 15px 20px;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        text-decoration: none;
+
+                        &::before {
+                            content: "\00BB";
+                            padding-right: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+body {
+    transition: right 0.5s;
+    right: 0;
+    position: relative;
+
+    .side-menu-opacity {
+        position: absolute;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        filter: opacity(0);
+        pointer-events: none;
+        transition: all 0.5s;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    &.menu-toggle {
+        .side-menu-opacity {
+            filter: opacity(0.4);
+            pointer-events: all;
+        }
+    }
+}
+
 // -- Home -- //
 section {
     height: 100%;
@@ -48,12 +152,14 @@ section {
         border-top: 1px solid rgba(51, 54, 69, 0.5);
         position: relative;
 
-        .slickSlider, .slick-list, .slick-track {
+        .slickSlider,
+        .slick-list,
+        .slick-track {
             height: 100%;
         }
 
-        .slick-slide { 
-            -webkit-backface-visibility: hidden; 
+        .slick-slide {
+            -webkit-backface-visibility: hidden;
 
             &:focus {
                 outline: none;
@@ -70,47 +176,46 @@ section {
             bottom: 30px;
             left: 0;
             right: 0;
-            
-                li {
-                    margin: 0 10px;
-                }
-            
-                button {
-                    display: block;
-                    cursor: pointer;
-                    padding: 0;
-                    border: none;
-                    border-radius: 100%;
-                    background-color: rgba(255,255,255,0.5);
-                    width: 11px;
-                    height: 11px;
-                    text-indent: -9999px;
 
-                    &:focus {
-                        outline: none;
-                    }
+            li {
+                margin: 0 10px;
+            }
 
-                    &:hover {
-                        background: #869791;
-                    }
+            button {
+                display: block;
+                cursor: pointer;
+                padding: 0;
+                border: none;
+                border-radius: 100%;
+                background-color: rgba(255, 255, 255, 0.5);
+                width: 11px;
+                height: 11px;
+                text-indent: -9999px;
+
+                &:focus {
+                    outline: none;
                 }
-            
-                li.slick-active button {
-                    background-color: rgba(255,255,255,1);
-                    position: relative;
-                    
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        top: -6px;
-                        left: -6px;
-                        width: 19px;
-                        height: 19px;
-                        border-radius: 50%;
-                        border: 2px solid #fff;
-                    }
+
+                &:hover {
+                    background: #869791;
                 }
-            
+            }
+
+            li.slick-active button {
+                background-color: rgba(255, 255, 255, 1);
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -6px;
+                    left: -6px;
+                    width: 19px;
+                    height: 19px;
+                    border-radius: 50%;
+                    border: 2px solid #fff;
+                }
+            }
         }
 
         .slickSlide {
@@ -123,22 +228,24 @@ section {
 
             &.one {
                 background-image: linear-gradient(
-                    to left,
-                    rgba(224, 174, 174, 0) 25%,
-                    rgba(0, 0, 0, 1) 100%
-                ), url("../img/slide1.jpg");
+                        to left,
+                        rgba(224, 174, 174, 0) 25%,
+                        rgba(0, 0, 0, 1) 100%
+                    ),
+                    url("../img/slide1.jpg");
             }
 
             &.two {
                 background-image: linear-gradient(
-                    to left,
-                    rgba(224, 174, 174, 0) 25%,
-                    rgba(0, 0, 0, 1) 100%
-                ), url("../img/slide2.jpg");
+                        to left,
+                        rgba(224, 174, 174, 0) 25%,
+                        rgba(0, 0, 0, 1) 100%
+                    ),
+                    url("../img/slide2.jpg");
 
                 .hero-button {
                     background-color: $colorBlue;
-                    
+
                     &:hover {
                         background-color: darken($colorBlue, 10%);
                     }
@@ -147,10 +254,11 @@ section {
 
             &.three {
                 background-image: linear-gradient(
-                    to left,
-                    rgba(224, 174, 174, 0) 25%,
-                    rgba(0, 0, 0, 1) 100%
-                ), url("../img/slide3.jpg");
+                        to left,
+                        rgba(224, 174, 174, 0) 25%,
+                        rgba(0, 0, 0, 1) 100%
+                    ),
+                    url("../img/slide3.jpg");
 
                 .hero-button {
                     background-color: $colorGreen;
@@ -163,10 +271,11 @@ section {
 
             &.four {
                 background-image: linear-gradient(
-                    to left,
-                    rgba(224, 174, 174, 0) 25%,
-                    rgba(0, 0, 0, 1) 100%
-                ), url("../img/slide4.jpg");
+                        to left,
+                        rgba(224, 174, 174, 0) 25%,
+                        rgba(0, 0, 0, 1) 100%
+                    ),
+                    url("../img/slide4.jpg");
 
                 .hero-button {
                     background-color: $colorRed;
@@ -179,10 +288,11 @@ section {
 
             &.five {
                 background-image: linear-gradient(
-                    to left,
-                    rgba(224, 174, 174, 0) 25%,
-                    rgba(0, 0, 0, 1) 100%
-                ), url("../img/slide5.jpg");
+                        to left,
+                        rgba(224, 174, 174, 0) 25%,
+                        rgba(0, 0, 0, 1) 100%
+                    ),
+                    url("../img/slide5.jpg");
 
                 .hero-button {
                     background-color: $colorSlate;
@@ -195,10 +305,11 @@ section {
 
             &.six {
                 background-image: linear-gradient(
-                    to left,
-                    rgba(224, 174, 174, 0) 25%,
-                    rgba(0, 0, 0, 1) 100%
-                ), url("../img/slide6.jpg");
+                        to left,
+                        rgba(224, 174, 174, 0) 25%,
+                        rgba(0, 0, 0, 1) 100%
+                    ),
+                    url("../img/slide6.jpg");
 
                 .hero-button {
                     background-color: $colorPink;
