@@ -129,7 +129,7 @@ body {
         filter: opacity(0);
         pointer-events: none;
         transition: all 0.5s;
-        z-index: 2;
+        z-index: 3;
         cursor: pointer;
     }
 
@@ -137,6 +137,23 @@ body {
         .side-menu-opacity {
             filter: opacity(0.4);
             pointer-events: all;
+        }
+    }
+
+    .cookie-popup {
+        position: fixed;
+        z-index: 2;
+        bottom: 30px;
+        left: 30px;
+        width: 450px;
+        height: 260px;
+        background-color: $colorNavy;
+        border-radius: 20px;
+        border: 1px solid white;
+
+        img {
+            width: 100px;
+            height: 100px;
         }
     }
 }
