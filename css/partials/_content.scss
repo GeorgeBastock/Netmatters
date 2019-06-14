@@ -44,36 +44,169 @@ section {
     // Hero page //
     &.hero {
         grid-area: hero;
-        height: calc(100vh - 209px);
+        height: calc(100vh - 217px);
         border-top: 1px solid rgba(51, 54, 69, 0.5);
         position: relative;
 
-        .hero-image {
+        .slickSlider, .slick-list, .slick-track {
+            height: 100%;
+        }
+
+        .slick-slide { 
+            -webkit-backface-visibility: hidden; 
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .slick-dots {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 16px 0;
+            list-style-type: none;
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            right: 0;
+            
+                li {
+                    margin: 0 10px;
+                }
+            
+                button {
+                    display: block;
+                    cursor: pointer;
+                    padding: 0;
+                    border: none;
+                    border-radius: 100%;
+                    background-color: rgba(255,255,255,0.5);
+                    width: 11px;
+                    height: 11px;
+                    text-indent: -9999px;
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                    &:hover {
+                        background: #869791;
+                    }
+                }
+            
+                li.slick-active button {
+                    background-color: rgba(255,255,255,1);
+                    position: relative;
+                    
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: -6px;
+                        left: -6px;
+                        width: 19px;
+                        height: 19px;
+                        border-radius: 50%;
+                        border: 2px solid #fff;
+                    }
+                }
+            
+        }
+
+        .slickSlide {
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            background-image: url("../img/slide.jpg");
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
             display: flex;
             justify-content: center;
             align-items: center;
 
-            // Background gradient //
-            &::before {
-                @include pseudo();
-                left: 0;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                background: linear-gradient(
+            &.one {
+                background-image: linear-gradient(
                     to left,
-                    rgba(0, 0, 0, 0) 25%,
+                    rgba(224, 174, 174, 0) 25%,
                     rgba(0, 0, 0, 1) 100%
-                );
+                ), url("../img/slide1.jpg");
+            }
+
+            &.two {
+                background-image: linear-gradient(
+                    to left,
+                    rgba(224, 174, 174, 0) 25%,
+                    rgba(0, 0, 0, 1) 100%
+                ), url("../img/slide2.jpg");
+
+                .hero-button {
+                    background-color: $colorBlue;
+                    
+                    &:hover {
+                        background-color: darken($colorBlue, 10%);
+                    }
+                }
+            }
+
+            &.three {
+                background-image: linear-gradient(
+                    to left,
+                    rgba(224, 174, 174, 0) 25%,
+                    rgba(0, 0, 0, 1) 100%
+                ), url("../img/slide3.jpg");
+
+                .hero-button {
+                    background-color: $colorGreen;
+
+                    &:hover {
+                        background-color: darken($colorGreen, 10%);
+                    }
+                }
+            }
+
+            &.four {
+                background-image: linear-gradient(
+                    to left,
+                    rgba(224, 174, 174, 0) 25%,
+                    rgba(0, 0, 0, 1) 100%
+                ), url("../img/slide4.jpg");
+
+                .hero-button {
+                    background-color: $colorRed;
+
+                    &:hover {
+                        background-color: darken($colorRed, 10%);
+                    }
+                }
+            }
+
+            &.five {
+                background-image: linear-gradient(
+                    to left,
+                    rgba(224, 174, 174, 0) 25%,
+                    rgba(0, 0, 0, 1) 100%
+                ), url("../img/slide5.jpg");
+
+                .hero-button {
+                    background-color: $colorSlate;
+
+                    &:hover {
+                        background-color: darken($colorSlate, 10%);
+                    }
+                }
+            }
+
+            &.six {
+                background-image: linear-gradient(
+                    to left,
+                    rgba(224, 174, 174, 0) 25%,
+                    rgba(0, 0, 0, 1) 100%
+                ), url("../img/slide6.jpg");
+
+                .hero-button {
+                    background-color: $colorPink;
+
+                    &:hover {
+                        background-color: darken($colorPink, 10%);
+                    }
+                }
             }
         }
 
@@ -93,6 +226,7 @@ section {
                 margin: 0 0 18px;
                 color: $colorWhite;
                 font-weight: normal;
+                line-height: 52px;
             }
 
             p {

@@ -115,18 +115,98 @@
     .hero {
         height: calc(100vh - 117px) !important;
 
-        .hero-image {
-            &::before {
-                background: linear-gradient(
+        .hero-content {
+            align-items: center !important;
+            text-align: center !important;
+        }
+
+        .slickSlide {
+            &.one {
+                background-image: linear-gradient(
                     to left,
-                    rgba(0, 0, 0, 0) -20%,
+                    rgba(224, 174, 174, 0) -50%,
                     rgba(0, 0, 0, 1) 100%
-                ) !important;
+                ), url("../img/slide1.jpg") !important;
             }
 
-            .hero-content {
-                align-items: center !important;
-                text-align: center !important;
+            &.two {
+                background-image: linear-gradient(
+                    to left,
+                    rgba(224, 174, 174, 0) -50%,
+                    rgba(0, 0, 0, 1) 100%
+                ), url("../img/slide2.jpg") !important;
+
+                .hero-button {
+                    background-color: $colorBlue;
+                    
+                    &:hover {
+                        background-color: darken($colorBlue, 10%);
+                    }
+                }
+            }
+
+            &.three {
+                background-image: linear-gradient(
+                    to left,
+                    rgba(224, 174, 174, 0) -50%,
+                    rgba(0, 0, 0, 1) 100%
+                ), url("../img/slide3.jpg") !important;
+
+                .hero-button {
+                    background-color: $colorGreen;
+
+                    &:hover {
+                        background-color: darken($colorGreen, 10%);
+                    }
+                }
+            }
+
+            &.four {
+                background-image: linear-gradient(
+                    to left,
+                    rgba(224, 174, 174, 0) -50%,
+                    rgba(0, 0, 0, 1) 100%
+                ), url("../img/slide4.jpg") !important;
+
+                .hero-button {
+                    background-color: $colorRed;
+
+                    &:hover {
+                        background-color: darken($colorRed, 10%);
+                    }
+                }
+            }
+
+            &.five {
+                background-image: linear-gradient(
+                    to left,
+                    rgba(224, 174, 174, 0) -50%,
+                    rgba(0, 0, 0, 1) 100%
+                ), url("../img/slide5.jpg") !important;
+
+                .hero-button {
+                    background-color: $colorSlate;
+
+                    &:hover {
+                        background-color: darken($colorSlate, 10%);
+                    }
+                }
+            }
+
+            &.six {
+                background-image: linear-gradient(
+                    to left,
+                    rgba(224, 174, 174, 0) -50%,
+                    rgba(0, 0, 0, 1) 100%
+                ), url("../img/slide6.jpg") !important;
+
+                .hero-button {
+                    background-color: $colorPink;
+
+                    &:hover {
+                        background-color: darken($colorPink, 10%);
+                    }
+                }
             }
         }
     }

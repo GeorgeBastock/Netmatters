@@ -490,21 +490,83 @@ section.hero {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: hero;
-  height: calc(100vh - 209px);
+  height: calc(100vh - 217px);
   border-top: 1px solid rgba(51, 54, 69, 0.5);
   position: relative;
 }
 
-section.hero .hero-image {
+section.hero .slickSlider, section.hero .slick-list, section.hero .slick-track {
+  height: 100%;
+}
+
+section.hero .slick-slide {
+  -webkit-backface-visibility: hidden;
+}
+
+section.hero .slick-slide:focus {
+  outline: none;
+}
+
+section.hero .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 16px 0;
+  list-style-type: none;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+}
+
+section.hero .slick-dots li {
+  margin: 0 10px;
+}
+
+section.hero .slick-dots button {
+  display: block;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 11px;
+  height: 11px;
+  text-indent: -9999px;
+}
+
+section.hero .slick-dots button:focus {
+  outline: none;
+}
+
+section.hero .slick-dots button:hover {
+  background: #869791;
+}
+
+section.hero .slick-dots li.slick-active button {
+  background-color: white;
+  position: relative;
+}
+
+section.hero .slick-dots li.slick-active button::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+section.hero .slickSlide {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../img/slide.jpg");
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -516,16 +578,74 @@ section.hero .hero-image {
           align-items: center;
 }
 
-section.hero .hero-image::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: -webkit-gradient(linear, right top, left top, color-stop(25%, rgba(0, 0, 0, 0)), to(black));
-  background: linear-gradient(to left, rgba(0, 0, 0, 0) 25%, black 100%);
+section.hero .slickSlide.one {
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(25%, rgba(224, 174, 174, 0)), to(black)), url("../img/slide1.jpg");
+  background-image: linear-gradient(to left, rgba(224, 174, 174, 0) 25%, black 100%), url("../img/slide1.jpg");
+}
+
+section.hero .slickSlide.two {
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(25%, rgba(224, 174, 174, 0)), to(black)), url("../img/slide2.jpg");
+  background-image: linear-gradient(to left, rgba(224, 174, 174, 0) 25%, black 100%), url("../img/slide2.jpg");
+}
+
+section.hero .slickSlide.two .hero-button {
+  background-color: #4183d7;
+}
+
+section.hero .slickSlide.two .hero-button:hover {
+  background-color: #286abd;
+}
+
+section.hero .slickSlide.three {
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(25%, rgba(224, 174, 174, 0)), to(black)), url("../img/slide3.jpg");
+  background-image: linear-gradient(to left, rgba(224, 174, 174, 0) 25%, black 100%), url("../img/slide3.jpg");
+}
+
+section.hero .slickSlide.three .hero-button {
+  background-color: #2ecc71;
+}
+
+section.hero .slickSlide.three .hero-button:hover {
+  background-color: #25a25a;
+}
+
+section.hero .slickSlide.four {
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(25%, rgba(224, 174, 174, 0)), to(black)), url("../img/slide4.jpg");
+  background-image: linear-gradient(to left, rgba(224, 174, 174, 0) 25%, black 100%), url("../img/slide4.jpg");
+}
+
+section.hero .slickSlide.four .hero-button {
+  background-color: #d64541;
+}
+
+section.hero .slickSlide.four .hero-button:hover {
+  background-color: #bc2c28;
+}
+
+section.hero .slickSlide.five {
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(25%, rgba(224, 174, 174, 0)), to(black)), url("../img/slide5.jpg");
+  background-image: linear-gradient(to left, rgba(224, 174, 174, 0) 25%, black 100%), url("../img/slide5.jpg");
+}
+
+section.hero .slickSlide.five .hero-button {
+  background-color: #67809f;
+}
+
+section.hero .slickSlide.five .hero-button:hover {
+  background-color: #526781;
+}
+
+section.hero .slickSlide.six {
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(25%, rgba(224, 174, 174, 0)), to(black)), url("../img/slide6.jpg");
+  background-image: linear-gradient(to left, rgba(224, 174, 174, 0) 25%, black 100%), url("../img/slide6.jpg");
+}
+
+section.hero .slickSlide.six .hero-button {
+  background-color: #f62459;
+}
+
+section.hero .slickSlide.six .hero-button:hover {
+  background-color: #de093f;
 }
 
 section.hero .hero-content {
@@ -551,6 +671,7 @@ section.hero .hero-content .h1 {
   margin: 0 0 18px;
   color: #fff;
   font-weight: normal;
+  line-height: 52px;
 }
 
 section.hero .hero-content p {
@@ -1411,15 +1532,65 @@ section.accreditations ul img:hover {
   .hero {
     height: calc(100vh - 117px) !important;
   }
-  .hero .hero-image::before {
-    background: -webkit-gradient(linear, right top, left top, color-stop(-20%, rgba(0, 0, 0, 0)), to(black)) !important;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0) -20%, black 100%) !important;
-  }
-  .hero .hero-image .hero-content {
+  .hero .hero-content {
     -webkit-box-align: center !important;
         -ms-flex-align: center !important;
             align-items: center !important;
     text-align: center !important;
+  }
+  .hero .slickSlide.one {
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(-50%, rgba(224, 174, 174, 0)), to(black)), url("../img/slide1.jpg") !important;
+    background-image: linear-gradient(to left, rgba(224, 174, 174, 0) -50%, black 100%), url("../img/slide1.jpg") !important;
+  }
+  .hero .slickSlide.two {
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(-50%, rgba(224, 174, 174, 0)), to(black)), url("../img/slide2.jpg") !important;
+    background-image: linear-gradient(to left, rgba(224, 174, 174, 0) -50%, black 100%), url("../img/slide2.jpg") !important;
+  }
+  .hero .slickSlide.two .hero-button {
+    background-color: #4183d7;
+  }
+  .hero .slickSlide.two .hero-button:hover {
+    background-color: #286abd;
+  }
+  .hero .slickSlide.three {
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(-50%, rgba(224, 174, 174, 0)), to(black)), url("../img/slide3.jpg") !important;
+    background-image: linear-gradient(to left, rgba(224, 174, 174, 0) -50%, black 100%), url("../img/slide3.jpg") !important;
+  }
+  .hero .slickSlide.three .hero-button {
+    background-color: #2ecc71;
+  }
+  .hero .slickSlide.three .hero-button:hover {
+    background-color: #25a25a;
+  }
+  .hero .slickSlide.four {
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(-50%, rgba(224, 174, 174, 0)), to(black)), url("../img/slide4.jpg") !important;
+    background-image: linear-gradient(to left, rgba(224, 174, 174, 0) -50%, black 100%), url("../img/slide4.jpg") !important;
+  }
+  .hero .slickSlide.four .hero-button {
+    background-color: #d64541;
+  }
+  .hero .slickSlide.four .hero-button:hover {
+    background-color: #bc2c28;
+  }
+  .hero .slickSlide.five {
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(-50%, rgba(224, 174, 174, 0)), to(black)), url("../img/slide5.jpg") !important;
+    background-image: linear-gradient(to left, rgba(224, 174, 174, 0) -50%, black 100%), url("../img/slide5.jpg") !important;
+  }
+  .hero .slickSlide.five .hero-button {
+    background-color: #67809f;
+  }
+  .hero .slickSlide.five .hero-button:hover {
+    background-color: #526781;
+  }
+  .hero .slickSlide.six {
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(-50%, rgba(224, 174, 174, 0)), to(black)), url("../img/slide6.jpg") !important;
+    background-image: linear-gradient(to left, rgba(224, 174, 174, 0) -50%, black 100%), url("../img/slide6.jpg") !important;
+  }
+  .hero .slickSlide.six .hero-button {
+    background-color: #f62459;
+  }
+  .hero .slickSlide.six .hero-button:hover {
+    background-color: #de093f;
   }
   .services {
     width: 750px !important;
