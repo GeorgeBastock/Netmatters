@@ -39,3 +39,7 @@ $('.side-menu-opacity').on('click', function(e) {
     }
     e.preventDefault();
 });
+
+$(".popup-close").click(function() {
+    $(".cookie-popup").css("display", "none");
+});
